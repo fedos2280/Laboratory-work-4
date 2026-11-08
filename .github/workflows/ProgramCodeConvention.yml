@@ -1,0 +1,14 @@
+name: Python Code Linter
+on:
+  push:
+    branches: [ main, master ]
+jobs:
+  PythonCodeLinter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code in Repository
+        uses: actions/checkout@v3
+      - name: Install flake8
+        run: pip install flake8
+      - name: Lint Program Code
+        run: flake8 ProgramCode.py
