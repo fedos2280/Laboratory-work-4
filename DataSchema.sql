@@ -11,7 +11,7 @@ CREATE TABLE amplitudes (
     max_safe_angle FLOAT CHECK (
         max_safe_angle >= 0.0 AND max_safe_angle <= 180.0
     ),
-    FOREIGN KEY (warmup_id) REFERENCES warmups (id)
+    FOREIGN KEY (warmup_id) REFERENCES warmups(id)
 );
 
 CREATE TABLE feedbacks (
